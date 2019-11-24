@@ -93,6 +93,8 @@ class UdgerBase(object):
         self.regexp_cache = {}
         if lru_cache_size > 0:
             self.lru_cache = LRUDict(lru_cache_size)
+        else:
+            self.lru_cache = None
 
     @staticmethod
     def dict_factory(cursor, row):
